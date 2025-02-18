@@ -1,0 +1,15 @@
+service: "service.MyONNXService"  
+description: "Сервис для предсказаний с использованием ONNX-модели"
+labels:
+  owner: "user"
+  project: "onnx_service"
+include:
+  - "*.py"
+  - "onnx_model"
+python:
+  packages:
+    - numpy
+    - onnxruntime
+    - bentoml
+    - onnx
+
